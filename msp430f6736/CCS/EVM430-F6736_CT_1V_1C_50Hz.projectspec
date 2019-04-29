@@ -1,0 +1,166 @@
+<projectSpec>
+  <project 
+    compilerBuildOptions="
+	  --define=__WATCHDOG_ENABLE__ 
+      -I${PROJECT_ROOT}
+	  -I${PROJECT_ROOT}/driverlib
+      -I${PROJECT_ROOT}/driverlib/MSP430F5xx_6xx
+	  -I${PROJECT_ROOT}/emSWLib
+	  -I${EMSWLIB_ROOT}/include
+	  -I${MATHLIB_ROOT}/include
+      -I${PROJECT_ROOT}/EM_Config
+	  -I${PROJECT_ROOT}/hal
+	  -I${PROJECT_ROOT}/hal/MSP430F5xx_6xx
+	  -I${PROJECT_ROOT}/DesignCenter/emDC
+	  -I${PROJECT_ROOT}/DesignCenter/comm
+	  -I${PROJECT_ROOT}/DesignCenter/guiApp
+	  -I${PROJECT_ROOT}/DesignCenter/guiApp/hmiDC
+      --code_model=large
+      --data_model=large
+	  --printf_support=full
+      -O4
+      --opt_for_speed=5 
+      --advice:power=&quot;none&quot;"
+	
+    linkerBuildOptions="
+	  --library=${EMSWLIB_ROOT}/CCS/MSP430F6xx/EMLib_CCS_MSP430F6xx.a
+	  --library=${MATHLIB_ROOT}/libraries/CCS/QmathLib.a
+	  --library=${MATHLIB_ROOT}/libraries/CCS/IQmathLib.a
+	  --stack_size=256"
+	  enableHexTool="true" 
+      hexBuildOptions="--ti_txt"
+   device="MSP430F6736"
+   name="EVM430-F6736_CT_1V_1C_50Hz"
+  >
+    <file action="copy" path="../DesignCenter/comm/comm.c" targetDirectory="DesignCenter/comm" />
+    <file action="copy" path="../DesignCenter/comm/comm.h" targetDirectory="DesignCenter/comm" />
+    <file action="copy" path="../DesignCenter/comm/comm_config.c" targetDirectory="DesignCenter/comm" />
+    <file action="copy" path="../DesignCenter/comm/comm_config.h" targetDirectory="DesignCenter/comm" />
+    <file action="copy" path="../DesignCenter/comm/drivers/i2cslave.c" targetDirectory="DesignCenter/comm/drivers" />
+    <file action="copy" path="../DesignCenter/comm/drivers/i2cslave.h" targetDirectory="DesignCenter/comm/drivers" />
+    <file action="copy" path="../DesignCenter/comm/drivers/i2cslave_defs.h" targetDirectory="DesignCenter/comm/drivers" />
+    <file action="copy" path="../DesignCenter/comm/drivers/timeout.c" targetDirectory="DesignCenter/comm/drivers" />
+    <file action="copy" path="../DesignCenter/comm/drivers/timeout.h" targetDirectory="DesignCenter/comm/drivers" />
+    <file action="copy" path="../DesignCenter/comm/drivers/timeout_defs.h" targetDirectory="DesignCenter/comm/drivers" />
+    <file action="copy" path="../DesignCenter/comm/drivers/uart.c" targetDirectory="DesignCenter/comm/drivers" />
+    <file action="copy" path="../DesignCenter/comm/drivers/uart.h" targetDirectory="DesignCenter/comm/drivers" />
+    <file action="copy" path="../DesignCenter/comm/drivers/uart_defs.h" targetDirectory="DesignCenter/comm/drivers" />
+    <file action="copy" path="../DesignCenter/comm/protocol/checksum.c" targetDirectory="DesignCenter/comm/protocol" />
+    <file action="copy" path="../DesignCenter/comm/protocol/checksum.h" targetDirectory="DesignCenter/comm/protocol" />
+    <file action="copy" path="../DesignCenter/comm/protocol/listener.c" targetDirectory="DesignCenter/comm/protocol" />
+    <file action="copy" path="../DesignCenter/comm/protocol/listener.h" targetDirectory="DesignCenter/comm/protocol" />
+    <file action="copy" path="../DesignCenter/comm/protocol/packet.c" targetDirectory="DesignCenter/comm/protocol" />
+    <file action="copy" path="../DesignCenter/comm/protocol/packet.h" targetDirectory="DesignCenter/comm/protocol" />
+    <file action="copy" path="../DesignCenter/comm/utils/byte_queue.c" targetDirectory="DesignCenter/comm/utils" />
+    <file action="copy" path="../DesignCenter/comm/utils/byte_queue.h" targetDirectory="DesignCenter/comm/utils" />
+    <file action="copy" path="../DesignCenter/comm/utils/ping_pong_buffer.c" targetDirectory="DesignCenter/comm/utils" />
+    <file action="copy" path="../DesignCenter/comm/utils/ping_pong_buffer.h" targetDirectory="DesignCenter/comm/utils" />
+    <file action="copy" path="../DesignCenter/emDC/emDCCommandHandlers.c" targetDirectory="DesignCenter/emDC" />
+    <file action="copy" path="../DesignCenter/emDC/emDCCommandHandlers.h" targetDirectory="DesignCenter/emDC" />
+    <file action="copy" path="../DesignCenter/guiApp/EMLibGUIApp.c" targetDirectory="DesignCenter/guiApp" />
+    <file action="copy" path="../DesignCenter/guiApp/EMLibGUIApp.h" targetDirectory="DesignCenter/guiApp" />
+    <file action="copy" path="../DesignCenter/guiApp/hmiDC/hmi.c" targetDirectory="DesignCenter/guiApp/hmiDC" />
+    <file action="copy" path="../DesignCenter/guiApp/hmiDC/hmi.h" targetDirectory="DesignCenter/guiApp/hmiDC" />
+    <file action="copy" path="../driverlib/MSP430F5xx_6xx/adc10_a.c" targetDirectory="driverlib/MSP430F5xx_6xx" />
+    <file action="copy" path="../driverlib/MSP430F5xx_6xx/adc10_a.h" targetDirectory="driverlib/MSP430F5xx_6xx" />
+    <file action="copy" path="../driverlib/MSP430F5xx_6xx/adc12_a.c" targetDirectory="driverlib/MSP430F5xx_6xx" />
+    <file action="copy" path="../driverlib/MSP430F5xx_6xx/adc12_a.h" targetDirectory="driverlib/MSP430F5xx_6xx" />
+    <file action="copy" path="../driverlib/MSP430F5xx_6xx/aes.c" targetDirectory="driverlib/MSP430F5xx_6xx" />
+    <file action="copy" path="../driverlib/MSP430F5xx_6xx/aes.h" targetDirectory="driverlib/MSP430F5xx_6xx" />
+    <file action="copy" path="../driverlib/MSP430F5xx_6xx/battbak.c" targetDirectory="driverlib/MSP430F5xx_6xx" />
+    <file action="copy" path="../driverlib/MSP430F5xx_6xx/battbak.h" targetDirectory="driverlib/MSP430F5xx_6xx" />
+    <file action="copy" path="../driverlib/MSP430F5xx_6xx/comp_b.c" targetDirectory="driverlib/MSP430F5xx_6xx" />
+    <file action="copy" path="../driverlib/MSP430F5xx_6xx/comp_b.h" targetDirectory="driverlib/MSP430F5xx_6xx" />
+    <file action="copy" path="../driverlib/MSP430F5xx_6xx/crc.c" targetDirectory="driverlib/MSP430F5xx_6xx" />
+    <file action="copy" path="../driverlib/MSP430F5xx_6xx/crc.h" targetDirectory="driverlib/MSP430F5xx_6xx" />
+    <file action="copy" path="../driverlib/MSP430F5xx_6xx/ctsd16.c" targetDirectory="driverlib/MSP430F5xx_6xx" />
+    <file action="copy" path="../driverlib/MSP430F5xx_6xx/ctsd16.h" targetDirectory="driverlib/MSP430F5xx_6xx" />
+    <file action="copy" path="../driverlib/MSP430F5xx_6xx/dac12_a.c" targetDirectory="driverlib/MSP430F5xx_6xx" />
+    <file action="copy" path="../driverlib/MSP430F5xx_6xx/dac12_a.h" targetDirectory="driverlib/MSP430F5xx_6xx" />
+    <file action="copy" path="../driverlib/MSP430F5xx_6xx/dma.c" targetDirectory="driverlib/MSP430F5xx_6xx" />
+    <file action="copy" path="../driverlib/MSP430F5xx_6xx/dma.h" targetDirectory="driverlib/MSP430F5xx_6xx" />
+    <file action="copy" path="../driverlib/MSP430F5xx_6xx/driverlib.h" targetDirectory="driverlib/MSP430F5xx_6xx" />
+    <file action="copy" path="../driverlib/MSP430F5xx_6xx/eusci_a_spi.c" targetDirectory="driverlib/MSP430F5xx_6xx" />
+    <file action="copy" path="../driverlib/MSP430F5xx_6xx/eusci_a_spi.h" targetDirectory="driverlib/MSP430F5xx_6xx" />
+    <file action="copy" path="../driverlib/MSP430F5xx_6xx/eusci_a_uart.c" targetDirectory="driverlib/MSP430F5xx_6xx" />
+    <file action="copy" path="../driverlib/MSP430F5xx_6xx/eusci_a_uart.h" targetDirectory="driverlib/MSP430F5xx_6xx" />
+    <file action="copy" path="../driverlib/MSP430F5xx_6xx/eusci_b_i2c.c" targetDirectory="driverlib/MSP430F5xx_6xx" />
+    <file action="copy" path="../driverlib/MSP430F5xx_6xx/eusci_b_i2c.h" targetDirectory="driverlib/MSP430F5xx_6xx" />
+    <file action="copy" path="../driverlib/MSP430F5xx_6xx/eusci_b_spi.c" targetDirectory="driverlib/MSP430F5xx_6xx" />
+    <file action="copy" path="../driverlib/MSP430F5xx_6xx/eusci_b_spi.h" targetDirectory="driverlib/MSP430F5xx_6xx" />
+    <file action="copy" path="../driverlib/MSP430F5xx_6xx/flashctl.c" targetDirectory="driverlib/MSP430F5xx_6xx" />
+    <file action="copy" path="../driverlib/MSP430F5xx_6xx/flashctl.h" targetDirectory="driverlib/MSP430F5xx_6xx" />
+    <file action="copy" path="../driverlib/MSP430F5xx_6xx/gpio.c" targetDirectory="driverlib/MSP430F5xx_6xx" />
+    <file action="copy" path="../driverlib/MSP430F5xx_6xx/gpio.h" targetDirectory="driverlib/MSP430F5xx_6xx" />
+    <file action="copy" path="../driverlib/MSP430F5xx_6xx/inc/hw_memmap.h" targetDirectory="driverlib/MSP430F5xx_6xx/inc" />
+    <file action="copy" path="../driverlib/MSP430F5xx_6xx/inc/version.h" targetDirectory="driverlib/MSP430F5xx_6xx/inc" />
+    <file action="copy" path="../driverlib/MSP430F5xx_6xx/lcd_b.c" targetDirectory="driverlib/MSP430F5xx_6xx" />
+    <file action="copy" path="../driverlib/MSP430F5xx_6xx/lcd_b.h" targetDirectory="driverlib/MSP430F5xx_6xx" />
+    <file action="copy" path="../driverlib/MSP430F5xx_6xx/ldopwr.c" targetDirectory="driverlib/MSP430F5xx_6xx" />
+    <file action="copy" path="../driverlib/MSP430F5xx_6xx/ldopwr.h" targetDirectory="driverlib/MSP430F5xx_6xx" />
+    <file action="copy" path="../driverlib/MSP430F5xx_6xx/mpy32.c" targetDirectory="driverlib/MSP430F5xx_6xx" />
+    <file action="copy" path="../driverlib/MSP430F5xx_6xx/mpy32.h" targetDirectory="driverlib/MSP430F5xx_6xx" />
+    <file action="copy" path="../driverlib/MSP430F5xx_6xx/oa.c" targetDirectory="driverlib/MSP430F5xx_6xx" />
+    <file action="copy" path="../driverlib/MSP430F5xx_6xx/oa.h" targetDirectory="driverlib/MSP430F5xx_6xx" />
+    <file action="copy" path="../driverlib/MSP430F5xx_6xx/pmap.c" targetDirectory="driverlib/MSP430F5xx_6xx" />
+    <file action="copy" path="../driverlib/MSP430F5xx_6xx/pmap.h" targetDirectory="driverlib/MSP430F5xx_6xx" />
+    <file action="copy" path="../driverlib/MSP430F5xx_6xx/pmm.c" targetDirectory="driverlib/MSP430F5xx_6xx" />
+    <file action="copy" path="../driverlib/MSP430F5xx_6xx/pmm.h" targetDirectory="driverlib/MSP430F5xx_6xx" />
+    <file action="copy" path="../driverlib/MSP430F5xx_6xx/ram.c" targetDirectory="driverlib/MSP430F5xx_6xx" />
+    <file action="copy" path="../driverlib/MSP430F5xx_6xx/ram.h" targetDirectory="driverlib/MSP430F5xx_6xx" />
+    <file action="copy" path="../driverlib/MSP430F5xx_6xx/ref.c" targetDirectory="driverlib/MSP430F5xx_6xx" />
+    <file action="copy" path="../driverlib/MSP430F5xx_6xx/ref.h" targetDirectory="driverlib/MSP430F5xx_6xx" />
+    <file action="copy" path="../driverlib/MSP430F5xx_6xx/rtc_a.c" targetDirectory="driverlib/MSP430F5xx_6xx" />
+    <file action="copy" path="../driverlib/MSP430F5xx_6xx/rtc_a.h" targetDirectory="driverlib/MSP430F5xx_6xx" />
+    <file action="copy" path="../driverlib/MSP430F5xx_6xx/rtc_b.c" targetDirectory="driverlib/MSP430F5xx_6xx" />
+    <file action="copy" path="../driverlib/MSP430F5xx_6xx/rtc_b.h" targetDirectory="driverlib/MSP430F5xx_6xx" />
+    <file action="copy" path="../driverlib/MSP430F5xx_6xx/rtc_c.c" targetDirectory="driverlib/MSP430F5xx_6xx" />
+    <file action="copy" path="../driverlib/MSP430F5xx_6xx/rtc_c.h" targetDirectory="driverlib/MSP430F5xx_6xx" />
+    <file action="copy" path="../driverlib/MSP430F5xx_6xx/sd24_b.c" targetDirectory="driverlib/MSP430F5xx_6xx" />
+    <file action="copy" path="../driverlib/MSP430F5xx_6xx/sd24_b.h" targetDirectory="driverlib/MSP430F5xx_6xx" />
+    <file action="copy" path="../driverlib/MSP430F5xx_6xx/sfr.c" targetDirectory="driverlib/MSP430F5xx_6xx" />
+    <file action="copy" path="../driverlib/MSP430F5xx_6xx/sfr.h" targetDirectory="driverlib/MSP430F5xx_6xx" />
+    <file action="copy" path="../driverlib/MSP430F5xx_6xx/sysctl.c" targetDirectory="driverlib/MSP430F5xx_6xx" />
+    <file action="copy" path="../driverlib/MSP430F5xx_6xx/sysctl.h" targetDirectory="driverlib/MSP430F5xx_6xx" />
+    <file action="copy" path="../driverlib/MSP430F5xx_6xx/tec.c" targetDirectory="driverlib/MSP430F5xx_6xx" />
+    <file action="copy" path="../driverlib/MSP430F5xx_6xx/tec.h" targetDirectory="driverlib/MSP430F5xx_6xx" />
+    <file action="copy" path="../driverlib/MSP430F5xx_6xx/timer_a.c" targetDirectory="driverlib/MSP430F5xx_6xx" />
+    <file action="copy" path="../driverlib/MSP430F5xx_6xx/timer_a.h" targetDirectory="driverlib/MSP430F5xx_6xx" />
+    <file action="copy" path="../driverlib/MSP430F5xx_6xx/timer_b.c" targetDirectory="driverlib/MSP430F5xx_6xx" />
+    <file action="copy" path="../driverlib/MSP430F5xx_6xx/timer_b.h" targetDirectory="driverlib/MSP430F5xx_6xx" />
+    <file action="copy" path="../driverlib/MSP430F5xx_6xx/timer_d.c" targetDirectory="driverlib/MSP430F5xx_6xx" />
+    <file action="copy" path="../driverlib/MSP430F5xx_6xx/timer_d.h" targetDirectory="driverlib/MSP430F5xx_6xx" />
+    <file action="copy" path="../driverlib/MSP430F5xx_6xx/tlv.c" targetDirectory="driverlib/MSP430F5xx_6xx" />
+    <file action="copy" path="../driverlib/MSP430F5xx_6xx/tlv.h" targetDirectory="driverlib/MSP430F5xx_6xx" />
+    <file action="copy" path="../driverlib/MSP430F5xx_6xx/ucs.c" targetDirectory="driverlib/MSP430F5xx_6xx" />
+    <file action="copy" path="../driverlib/MSP430F5xx_6xx/ucs.h" targetDirectory="driverlib/MSP430F5xx_6xx" />
+    <file action="copy" path="../driverlib/MSP430F5xx_6xx/usci_a_spi.c" targetDirectory="driverlib/MSP430F5xx_6xx" />
+    <file action="copy" path="../driverlib/MSP430F5xx_6xx/usci_a_spi.h" targetDirectory="driverlib/MSP430F5xx_6xx" />
+    <file action="copy" path="../driverlib/MSP430F5xx_6xx/usci_a_uart.c" targetDirectory="driverlib/MSP430F5xx_6xx" />
+    <file action="copy" path="../driverlib/MSP430F5xx_6xx/usci_a_uart.h" targetDirectory="driverlib/MSP430F5xx_6xx" />
+    <file action="copy" path="../driverlib/MSP430F5xx_6xx/usci_b_i2c.c" targetDirectory="driverlib/MSP430F5xx_6xx" />
+    <file action="copy" path="../driverlib/MSP430F5xx_6xx/usci_b_i2c.h" targetDirectory="driverlib/MSP430F5xx_6xx" />
+    <file action="copy" path="../driverlib/MSP430F5xx_6xx/usci_b_spi.c" targetDirectory="driverlib/MSP430F5xx_6xx" />
+    <file action="copy" path="../driverlib/MSP430F5xx_6xx/usci_b_spi.h" targetDirectory="driverlib/MSP430F5xx_6xx" />
+    <file action="copy" path="../driverlib/MSP430F5xx_6xx/wdt_a.c" targetDirectory="driverlib/MSP430F5xx_6xx" />
+    <file action="copy" path="../driverlib/MSP430F5xx_6xx/wdt_a.h" targetDirectory="driverlib/MSP430F5xx_6xx" />
+    <file action="copy" path="../EM_Config/emReactivePowerIIRCoeff.h" targetDirectory="EM_Config" />
+    <file action="copy" path="../EM_Config/EM_userConfig.c" targetDirectory="EM_Config" />
+    <file action="copy" path="../EM_Config/EM_userConfig.h" targetDirectory="EM_Config" />
+    <file action="copy" path="../hal/MSP430F5xx_6xx/hal.h" targetDirectory="hal/MSP430F5xx_6xx" />
+    <file action="copy" path="../hal/MSP430F5xx_6xx/hal_adc.c" targetDirectory="hal/MSP430F5xx_6xx" />
+    <file action="copy" path="../hal/MSP430F5xx_6xx/hal_adc.h" targetDirectory="hal/MSP430F5xx_6xx" />
+    <file action="copy" path="../hal/MSP430F5xx_6xx/hal_system.c" targetDirectory="hal/MSP430F5xx_6xx" />
+    <file action="copy" path="../hal/MSP430F5xx_6xx/hal_system.h" targetDirectory="hal/MSP430F5xx_6xx" />
+    <file action="copy" path="../main.c" />
+    <file action="copy" path="../system_pre_init.c" />
+	<buildVariable name="EMSWLIB_ROOT" scope="project" type="dir" value="../lib/EM" />
+	<buildVariable name="MATHLIB_ROOT" scope="project" type="dir" value="../lib/mathlib" />
+	<file action="link" path="../lib/EM/include/emSwLib.h" targetDirectory="emSWLib" />
+    <file action="link" path="../lib/EM/CCS/MSP430F6xx/EMLib_CCS_MSP430F6xx.a" targetDirectory="emSWLib" />
+    <file action="link" path	="../lib/mathlib/include/QmathLib.h" targetDirectory="QMathLib" />
+    <file action="link" path="../lib/mathlib/libraries/CCS/QmathLib.a" targetDirectory="QMathLib" />
+    <file action="link" path="../lib/mathlib/include/IQmathLib.h" targetDirectory="IQMathLib" />
+    <file action="link" path="../lib/mathlib/libraries/CCS/IQmathLib.a" targetDirectory="IQMathLib" />
+  </project>
+</projectSpec>
